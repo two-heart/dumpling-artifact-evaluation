@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  dumpling-eval-bug-finding-and-overhead:
+    build: bug_finding_and_overhead
+    init: true
+    volumes:
+      - ./bug_finding_and_overhead/data:/data
+    environment:
+      # Fuzzing runtime in hours for each of the <EXP_NUM_RUNS> runs
+      - EXP_RUN_HOURS=3
+      # Number of runs
+      - EXP_NUM_RUNS=5
+      # Number of Fuzzilli instances
+      - NUM_JOBS=30
+  dumpling-eval-sensitivity:
+    build: sensitivity
+    init: true
+    volumes:
+      - ./sensitivity/data:/data
+  dumpling-eval-hyperparameters:
+    build: hyperparameters
+    init: true
+    volumes:
+      - ./hyperparameters/data:/data
