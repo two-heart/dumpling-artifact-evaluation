@@ -59,7 +59,7 @@ cd dumpling-artifact-evaluation.git
 Install dependencies.
 
 ```bash
-cd dumpling-docker
+cd dumpling-artifact-evaluation
 
 # Install Docker in case it is missing
 if docker compose ; then
@@ -89,7 +89,7 @@ Specifically, we run Dumpling for the first 10,000 inputs and dump a hash
 representation of the states observed.
 
 ```bash
-cd dumpling-docker
+cd dumpling-artifact-evaluation
 docker compose up -d dumpling-eval-sensitivity
 ls ./sensitivity/data
 ```
@@ -113,7 +113,7 @@ in `docker-compose.yml`:
 To demonstrate our points, we scale down to 
 
 ```bash
-cd dumpling-docker
+cd dumpling-artifact-evaluation
 docker compose up -d dumpling-eval-bug-finding-and-overhead
 ls ./bug_finding_and_overhead/data/
 ```
@@ -126,7 +126,7 @@ This command reproduces the hyperparameter results showed in Table II.
 Specifically, we run Dumpling for the first 10,000 inputs with different configurations, measure execution per second and dump size.
 
 ```bash
-cd dumpling-docker
+cd dumpling-artifact-evaluation
 docker compose up -d dumpling-eval-hyperparameters
 ls ./hyperparameters/data
 ```
