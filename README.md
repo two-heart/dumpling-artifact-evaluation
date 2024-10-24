@@ -49,7 +49,7 @@ We tested our prototype on an Ubuntu 22.04.
 ```bash
 sudo apt install -qq -y python3-pip git curl screen
 git clone https://github.com/two-heart/dumpling-artifact-evaluation.git
-cd dumpling-artifact-evaluation.git
+cd dumpling-artifact-evaluation
 ```
 
 ---
