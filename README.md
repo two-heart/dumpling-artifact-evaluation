@@ -82,6 +82,18 @@ The evaluation reproduces the results in sections V.A, V.B, V.C, and V.D.
 
 Folder `./poc` contains the JS inputs detected during our fuzzing campaigns and listed in Table I. 
 
+These are all the issues founds liked to their official report in Chromium bug tracker.
+- [329330868.js](https://crbug.com/329330868)
+- [332745405.js](https://crbug.com/332745405)
+- [335310000.js](https://crbug.com/335310000)
+- [345960102.js](https://crbug.com/345960102)
+- [346086168.js](https://crbug.com/346086168)
+- [40945996.js](https://crbug.com/40945996) (this issue is not publicly available yet)
+- [41484971.js](https://crbug.com/41484971)
+- [41488094.js](https://crbug.com/41488094)
+- [42204501.js](https://crbug.com/42204501)
+- [42204551.js](https://crbug.com/42204551)
+
 ## Bug Oracle Sensitivity (V.B)
 
 This command reproduces the sensitivity experiment depicted in Figure 7.
