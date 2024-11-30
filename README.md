@@ -1,7 +1,7 @@
 # Dumpling: Fine-grained Differential JavaScript Engine Fuzzing
 
 
-This document will walk you trough replicating the results from our paper: Dumpling: Fine-grained Differential JavaScript Engine Fuzzing published in NDSS'25.
+This document will walk you through replicating the results from our paper: Dumpling: Fine-grained Differential JavaScript Engine Fuzzing published in NDSS'25.
 
 The project is composed of a customized version of V8 and Fuzzilli based on the following base commits:
 * V8 base commit: 6e70dc9e73af2a930074f4f000864fbc65515b74
