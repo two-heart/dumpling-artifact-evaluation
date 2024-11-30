@@ -1,7 +1,18 @@
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://github.com/two-heart/dumpling-artifact-evaluation/blob/main/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14249678.svg)](https://doi.org/10.5281/zenodo.14249678)
+
 # Dumpling: Fine-grained Differential JavaScript Engine Fuzzing
 
 
-This document will walk you through replicating the results from our paper: Dumpling: Fine-grained Differential JavaScript Engine Fuzzing published in NDSS'25.
+This document will walk you through replicating the results from our paper:
+Dumpling: Fine-grained Differential JavaScript Engine Fuzzing published in
+NDSS'25
+([DOI:10.14722/ndss.2025.241411](https://dx.doi.org/10.14722/ndss.2025.241411)).
+Additonally, the complete artifact can be found on
+[Zenodo](https://zenodo.org/records/14249678)
+([DOI:10.5281/zenodo.14249678](https://doi.org/10.5281/zenodo.14249678)).
+
 
 The project is composed of a customized version of V8 and Fuzzilli based on the following base commits:
 * V8 base commit: 6e70dc9e73af2a930074f4f000864fbc65515b74
@@ -9,10 +20,9 @@ The project is composed of a customized version of V8 and Fuzzilli based on the 
 
 For your convenience, we provide a docker-compose setup that takes care of fetching the relevant repos, installing dependencies, and building the components.
 As such, you only need to install docker with docker-compose.
-Our modification are organized as patches that will be automatically applied during the docker building.
+Our modifications are organized as patches that will be automatically applied during the docker building.
 
 The procedure for the initial build starts from [here](#getting-code-and-initial-requirements) while the commands to replicate our results are [here](#evaluation).
-
 
 ### Citation
 
@@ -20,7 +30,7 @@ The procedure for the initial build starts from [here](#getting-code-and-initial
 @inproceedings{dumpling,
   author = {Wachter, Liam and Gremminger, Julian and Wressnegger, Christian and Payer, Mathias and Toffalini, Flavio},
   booktitle = {32th Annual Network and Distributed System Security Symposium, \{NDSS\} 2025, San Diego, California, USA, February 23 - 28, 2025,},
-  doi = {XXX},
+  doi = {https://dx.doi.org/10.14722/ndss.2025.241411},
   month = feb,
   publisher = {The Internet Society},
   title = {{Dumpling: Fine-grained Differential JavaScript Engine Fuzzing}},
@@ -46,12 +56,16 @@ Dumpling is implemented as a set of patches applied to Fuzzilli and V8.
 
 ## Artifact Evaluation
 
-**Disclaimer:** since many steps run for a few hours, we recommend you operate in a `screen` session to avoid loosing partial results or environment values.
-Additionally, Dumpling is still a research prototype with a liberal amount of logging still enabled.
-Errors or warnings messages can be printed as part of the build process.
+**Disclaimer:** Since many steps run for a few hours, we recommend you operate
+in a `screen` session to avoid losing partial results or environment values.
+Additionally, Dumpling is still a research prototype with a liberal amount of
+logging still enabled. Errors or warning messages can be printed as part of the
+build process.
 
-**Machine Requirements:** We recommend to run the experiments on a Intel or AMD machine (ARM is not supported yet) with 16 physical cores, 64 GB of RAM, and at least 100 GB of free space on the hard drive.
-We tested our prototype on an Ubuntu 22.04.
+**Machine Requirements:** We recommend running the experiments on an Intel or AMD
+machine (ARM is not supported yet) with 16 physical cores, 64 GB of RAM, and at
+least 100 GB of free space on the hard drive. We tested our prototype on an
+Ubuntu 22.04.
 
 ### Getting code and initial requirements
 
@@ -89,9 +103,11 @@ The evaluation reproduces the results in sections V.A, V.B, V.C, and V.D.
 
 ## Bug Finding (V.A)
 
-Folder `./poc` contains the JS inputs detected during our fuzzing campaigns and listed in Table I. 
+Folder `./poc` contains the JS inputs detected during our fuzzing campaigns and
+are listed in Table I.
 
-These are all the issues founds liked to their official report in Chromium bug tracker.
+These are all the issues linked to their official report in the Chromium bug
+tracker.
 - [329330868.js](https://crbug.com/329330868)
 - [332745405.js](https://crbug.com/332745405)
 - [335310000.js](https://crbug.com/335310000)
